@@ -14,26 +14,23 @@
 
 body{
     background-color: var(--bglight);
-    color: var(--bluedark);
+    color: var(--bluemid);
     text-align: center;
     font-family: "Amazon Ember", sans-serif;
-    font-weight: 300; /* Light */
-    color: var(--bluemid);
+    font-weight: 300;
     line-height: 1.33;
     letter-spacing: 0;
     margin: 0;
 }
 
-/* Headlines */
 h1, h2, h3 {
   font-family: "Amazon Ember", sans-serif;
   font-weight: 300;
   color: var(--bluedark);
   text-transform: none;
-  margin-bottom: 0.5em;
   line-height: 1.33;
   text-rendering: optimizeLegibility;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 h3{
@@ -42,13 +39,11 @@ h3{
   text-align-last: center;
 }
 
-/* Subheads */
 h4, h5 {
   font-family: "Amazon Ember", sans-serif;
-  font-weight: 700; /* Bold */
+  font-weight: 700;
   color: var(--bluemid);
-  margin-top: 0.5em; 
-  margin-bottom: 0.5em;
+  margin: 0.5em 0;
   line-height: 1.33;
   letter-spacing: 0;
 }
@@ -56,6 +51,10 @@ h4, h5 {
 header{
   background-color: var(--bluedark);
   padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 header *{
@@ -64,6 +63,7 @@ header *{
   padding: 0;
   text-decoration: none;
 }
+
 header h1{
   font-size: 4em;
 }
@@ -73,21 +73,26 @@ header div{
   flex-direction: row;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 section{
   width: 50%;
-  margin: auto;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 100%;
+  padding: 0 10px;
 }
 
-/* Body Copy */
 p, li {
   font-family: "Amazon Ember", sans-serif;
-  font-weight: 300; /* Light */
+  font-weight: 300;
   color: var(--bluemid);
   line-height: 1.33;
   letter-spacing: 0;
-  max-width: 30ch; /* ≈ 15 palabras por línea */
+  max-width: 30ch;
   margin-bottom: 1em;
 }
 
@@ -97,6 +102,7 @@ form{
   flex-direction: column;
   gap: 10px;
   max-width: 400px;
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
   border-radius: 8px;
@@ -108,7 +114,6 @@ form textarea {
   border: 1px solid var(--bluedark);
   border-radius: 4px;
 }
-
 
 form input:focus,
 form textarea:focus {
@@ -142,11 +147,12 @@ footer{
     justify-content: center;
     gap: 10px;
     width: 100%;
-    margin: 0 100px 0 0;
-    padding: 5px;
+    padding: 10px 5px;
     background-color: var(--orangeaccent);
+    flex-wrap: wrap;
 }
 
 footer img{
   height:3em;
+  max-width: 100%;
 }
