@@ -5,7 +5,7 @@
     --orangeaccent: #FF8000;
 
     --bgdark:     hsl(0, 0%, 15%);
-    --bglight:    hsl(0, 0%, 90%);
+    --bglight:    hsl(0, 0%, 80%);
 }
 
 *{
@@ -77,13 +77,17 @@ header div{
 }
 
 section{
+  background-color: hsl(0, 0%, 95%);
+  box-shadow: 0px 4px 4px hsla(0, 0%, 0%, 0.188), 
+      0px 12px 12px hsla(0, 0%, 0%, 0.082);
   width: 50%;
   margin: 20px auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 100%;
-  padding: 0 10px;
+  max-width: 700%;
+  padding: 20px 40px;
+  border-radius: 20px;
 }
 
 p, li {
