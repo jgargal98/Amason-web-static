@@ -1,0 +1,152 @@
+:root{
+    --bluedark:     #1F385A;
+    --bluemid:      #2A6E9E;
+    --bluelight:    #43A0D7;
+    --orangeaccent: #FF8000;
+
+    --bgdark:     hsl(0, 0%, 15%);
+    --bglight:    hsl(0, 0%, 90%);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bglight);
+    color: var(--bluedark);
+    text-align: center;
+    font-family: "Amazon Ember", sans-serif;
+    font-weight: 300; /* Light */
+    color: var(--bluemid);
+    line-height: 1.33;
+    letter-spacing: 0;
+    margin: 0;
+}
+
+/* Headlines */
+h1, h2, h3 {
+  font-family: "Amazon Ember", sans-serif;
+  font-weight: 300;
+  color: var(--bluedark);
+  text-transform: none;
+  margin-bottom: 0.5em;
+  line-height: 1.33;
+  text-rendering: optimizeLegibility;
+  margin-bottom: 0;
+}
+
+h3{
+  text-align: justify;
+  text-justify: distribute;
+  text-align-last: center;
+}
+
+/* Subheads */
+h4, h5 {
+  font-family: "Amazon Ember", sans-serif;
+  font-weight: 700; /* Bold */
+  color: var(--bluemid);
+  margin-top: 0.5em; 
+  margin-bottom: 0.5em;
+  line-height: 1.33;
+  letter-spacing: 0;
+}
+
+header{
+  background-color: var(--bluedark);
+  padding: 10px 10px;
+}
+
+header *{
+  color: var(--bluelight);
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+header h1{
+  font-size: 4em;
+}
+
+header div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+section{
+  width: 50%;
+  margin: auto;
+}
+
+/* Body Copy */
+p, li {
+  font-family: "Amazon Ember", sans-serif;
+  font-weight: 300; /* Light */
+  color: var(--bluemid);
+  line-height: 1.33;
+  letter-spacing: 0;
+  max-width: 30ch; /* ≈ 15 palabras por línea */
+  margin-bottom: 1em;
+}
+
+form{
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+form input,
+form textarea {
+  padding: 8px;
+  border: 1px solid var(--bluedark);
+  border-radius: 4px;
+}
+
+
+form input:focus,
+form textarea:focus {
+  border-color: var(--bluelight);
+  outline: none;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--bluelight);
+  color: var(--graylight);
+  padding: 0.5rem 1rem;
+  margin: 0 auto;
+  border: none;
+  font-family: "Amazon Ember", sans-serif;
+  border-radius: 0.25rem;
+  width: 50%;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+}
+
+.button:hover {
+  background-color: var(--orangeaccent);
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin: 0 100px 0 0;
+    padding: 5px;
+    background-color: var(--orangeaccent);
+}
+
+footer img{
+  height:3em;
+}

@@ -1,0 +1,29 @@
+/* Body Copy - Light */
+@font-face {
+  font-family: "Amazon Ember";
+  src: url("../amazon_typography_webfonts/AmazonEmber_W_Lt.woff2") format("woff2"),
+       url("../amazon_typography_webfonts/AmazonEmber_W_Lt.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Headlines - Display Light */
+@font-face {
+  font-family: "Amazon Ember";
+  src: url("../amazon_typography_webfonts/AmazonEmberDisplay_W_Lt.woff2") format("woff2"),
+       url("../amazon_typography_webfonts/AmazonEmberDisplay_W_Lt.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Subheads - Bold */
+@font-face {
+  font-family: "Amazon Ember";
+  src: url("../amazon_typography_webfonts/AmazonEmber_W_Bd.woff2") format("woff2"),
+       url("../amazon_typography_webfonts/AmazonEmber_W_Bd.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
