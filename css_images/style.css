@@ -124,7 +124,7 @@ a:hover {
 }
 
 nav a:hover{
-  font-size: 1.2em;
+  transform: scale(1.2);
 }
 
 section {
