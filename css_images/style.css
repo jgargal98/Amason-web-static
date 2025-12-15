@@ -5,7 +5,10 @@
     --orangeaccent: #FF8000;
 
     --bgdark:     hsl(0, 0%, 15%);
-    --bglight:    hsl(0, 0%, 80%);
+    --bglight:    hsl(0, 0%, 90%);
+
+    --alturaHeader: 4em;
+    --alturaSection: 4em;
 }
 
 *{
@@ -17,7 +20,7 @@ html {
 }
 
 body{
-    background-color: var(--bglight);
+    background-color: var(--bluelight);
     color: var(--bluemid);
     text-align: center;
     font-family: "Amazon Ember", sans-serif;
@@ -25,11 +28,26 @@ body{
     line-height: 1.33;
     letter-spacing: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, nav, footer {
+  flex-shrink: 0;
+}
+
+#main{
+  flex-grow: 1;
+  display: flex;
+  gap: 100px;
+  align-content: center;
+  justify-content: center;
 }
 
 h1, h2, h3 {
   font-family: "Amazon Ember", sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   color: var(--bluedark);
   text-transform: none;
   line-height: 1.33;
@@ -55,9 +73,14 @@ h4, h5 {
 header{
   background-color: var(--bluedark);
   display: flex;
-  flex-direction: column;
+  align-content: center;
   align-items: center;
+  justify-content: center;
   gap: 10px;
+}
+
+header img{
+  height: var(--alturaHeader);
 }
 
 header *, nav *{
@@ -68,7 +91,8 @@ header *, nav *{
 }
 
 header h1{
-  font-size: 4em;
+  font-size: var(--alturaHeader);
+  color: var(--orangeaccent);
 }
 
 nav{
@@ -83,19 +107,48 @@ nav{
   padding: 10px 0;
 }
 
-section{
-  background-color: hsl(0, 0%, 95%);
-  box-shadow: 0px 4px 4px hsla(0, 0%, 0%, 0.188), 
-      0px 12px 12px hsla(0, 0%, 0%, 0.082);
-  width: 50%;
-  margin: 20px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 700%;
-  padding: 20px 40px;
-  border-radius: 20px;
+a {
+  color: var(--bluelight);
+  transition: all 0.3s;
+  display: inline-block;
 }
+
+a:hover {
+  color: var(--orangeaccent);
+  font-size: 1.2em;
+}
+
+section {
+  background-color: hsl(0, 0%, 95%);
+  box-shadow: 0px 4px 4px hsla(0, 0%, 0%, 0.188),
+              0px 12px 12px hsla(0, 0%, 0%, 0.082);
+  margin: 5%;
+  display: flex;
+  max-width: 70%;
+  padding: 20px 40px;
+  border-radius: 5px;
+  flex: 1;
+}
+
+section h1 {
+  flex: 0 0 30%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  margin: 0;
+  box-shadow: var(--orangeaccent);
+}
+
+section h3 {
+  flex: 0 0 70%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  margin: 0;
+}
+
 
 p, li {
   font-family: "Amazon Ember", sans-serif;
@@ -109,12 +162,13 @@ p, li {
 
 form{
   text-align: justify;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 10px;
   max-width: 400px;
   width: 100%;
-  margin: 0 auto;
   padding: 20px;
   border-radius: 8px;
 }
@@ -124,32 +178,55 @@ form textarea {
   padding: 8px;
   border: 1px solid var(--bluedark);
   border-radius: 4px;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.2s;
 }
 
 form input:focus,
 form textarea:focus {
   border-color: var(--bluelight);
+  box-shadow: 0 0 8px var(--orangeaccent);
+  transform: scale(1.02);
   outline: none;
+}
+
+form input:hover,
+form textarea:hover {
+  border-color: var(--orangeaccent);
 }
 
 .button {
   display: inline-block;
-  background-color: var(--bluelight);
-  color: var(--graylight);
-  padding: 0.5rem 1rem;
+  background-color: var(--bluedark);
+  color: white;
+  padding: 0.6rem 1.2rem;
   margin: 0 auto;
   border: none;
   font-family: "Amazon Ember", sans-serif;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   width: 50%;
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.1s ease;
+  transition: all 0.3s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .button:hover {
   background-color: var(--orangeaccent);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+*::placeholder {
+  font-family: "Amazon Ember", sans-serif;
+  color: var(--bluedark);
+  font-size: 0.9rem;
+  font-style: italic;
 }
 
 footer{
@@ -159,7 +236,7 @@ footer{
     gap: 10px;
     width: 100%;
     padding: 10px 5px;
-    background-color: var(--orangeaccent);
+    background-color: var(--bluedark);
     flex-wrap: wrap;
 }
 
