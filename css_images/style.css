@@ -141,7 +141,7 @@ section {
   display: flex;
   max-width: 70%;
   padding: 20px 40px;
-  border-radius: 5px;
+  border-radius: 50px;
   flex: 1;
 }
 
