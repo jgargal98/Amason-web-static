@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Geom&display=swap');
+
 :root{
     --bluedark:     #1F385A;
     --bluemid:      #2A6E9E;
@@ -50,8 +52,7 @@ header, nav, footer {
   justify-content: center;
 }
 
-h1, h2, h3 {
-  font-family: "Amazon Ember", sans-serif;
+h1, h3 {
   font-weight: 500;
   color: var(--bluedark);
   text-transform: none;
@@ -60,7 +61,12 @@ h1, h2, h3 {
   margin: 0;
 }
 
+h1, nav a{
+  font-family: 'Geom', sans-serif;
+}
+
 h3{
+  font-family: "Amazon Ember", sans-serif;
   text-align: justify;
   text-justify: distribute;
   text-align-last: center;
@@ -129,8 +135,8 @@ nav a:hover{
 
 section {
   background-color: hsl(0, 0%, 95%);
-  box-shadow: 0px 4px 4px hsla(0, 0%, 0%, 0.188),
-              0px 12px 12px hsla(0, 0%, 0%, 0.082);
+  box-shadow: 0px 8px 8px hsla(0, 0%, 0%, 0.188),
+              0px 24px 24px hsla(0, 0%, 0%, 0.082);
   margin: 5%;
   display: flex;
   max-width: 70%;
