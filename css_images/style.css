@@ -49,7 +49,9 @@ header, nav, footer {
 }
 
 #titulo{
-  font-size: 5em;
+  color: var(--orangeaccent);
+  font-size: 4em;
+  text-shadow:  0px 4px 4px var(--bluedark);
   margin: 25px auto;
 }
 
