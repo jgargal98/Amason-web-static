@@ -11,6 +11,8 @@
 
     --alturaHeader: 4em;
     --alturaSection: 4em;
+
+    --transition: all 0.3s ease-in-out;
 }
 
 *{
@@ -22,7 +24,9 @@ html {
 }
 
 body{
-    background-color: var(--bluelight);
+    background-image: url("landing-background-dark.jpg");
+    background-size: cover;
+    background-position: center;
     color: var(--bluemid);
     text-align: center;
     font-family: "Amazon Ember", sans-serif;
@@ -112,14 +116,13 @@ nav{
 
 a {
   color: var(--bluelight);
-  transition: all 0.3s;
+  transition: var(--transition);
   display: inline-block;
   text-decoration: none;
 }
 
 a:hover {
   color: var(--orangeaccent);
-
 }
 
 nav a:hover{
@@ -164,11 +167,8 @@ section h3 {
     margin: auto;
     padding: 0;
     height: 100%;
-    background-color: rgba(0,0,0,0);
-    background-image: url("css_images/hero.jpg");
-    background-size: cover;
-    background-position: center;
     border-radius: 0;
+    background-color: rgba(0,0,0,0);
 }
 
 #inicio > div {
@@ -183,10 +183,22 @@ section h3 {
   color: transparent;
   -webkit-text-stroke-color: var(--orangeaccent);
   -webkit-text-stroke-width: 2px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
+
 #inicio h1:hover {
   color: var(--orangeaccent);
-  transition: all 0.3s;
+  transition: var(--transition);
+}
+
+#inicio a{
+  color: transparent;
+}
+
+#inicio a:hover {
+  color: var(--orangeaccent);
+  transition: var(--transition);
+  transform: scale(1.1);
 }
 
 #inicio h3 {
@@ -222,7 +234,7 @@ form textarea {
   padding: 8px;
   border: 1px solid var(--bluedark);
   border-radius: 4px;
-  transition: border-color 0.3s, box-shadow 0.3s, transform 0.2s;
+  transition: var(--transition);
 }
 
 form input:focus,
@@ -254,7 +266,7 @@ form .button{
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: var(--transition);
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
