@@ -1,7 +1,10 @@
 <?php
 $idioma = $_GET['lang'] ?? 'en';
 
-$conexion = new mysqli("localhost", "usuario", "password", "textos_web");
+$conexion = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME);
+if ($conexion->connect_error) {
+    die("Error de conexión: " . $conexion->connect_error);
+}
 
 $consulta = $conexion->prepare(
     "SELECT clave, contenido FROM textos WHERE idioma = ?"
