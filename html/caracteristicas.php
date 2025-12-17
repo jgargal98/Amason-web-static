@@ -1,4 +1,5 @@
 <?php
+include 'config.php';
 $idioma = $_GET['lang'] ?? 'en';
 
 $conexion = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME);
@@ -35,9 +36,9 @@ while ($fila = $resultado->fetch_assoc()) {
     </header>
     <nav>
         <div class="nav-links">
-            <a href="html/caracteristicas.php"><?php echo $textos['nav_features']; ?></a>
-            <a href="html/sobreNosotros.php"><?php echo $textos['nav_about_us']; ?></a>
-            <a href="html/contacto.php"><?php echo $textos['nav_contact_us']; ?></a>
+            <a href="caracteristicas.php"><?php echo $textos['nav_features']; ?></a>
+            <a href="sobreNosotros.php"><?php echo $textos['nav_about_us']; ?></a>
+            <a href="contacto.php"><?php echo $textos['nav_contact_us']; ?></a>
         </div>
         <div class="lang-buttons">
             <a href="?lang=es">ES</a>
