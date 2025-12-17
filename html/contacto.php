@@ -1,7 +1,13 @@
 <?php
 include 'config.php';
 
-$idioma = $_GET['lang'] ?? 'en';
+session_start(); // iniciar sesión
+
+if (isset($_GET['lang'])) {
+    $_SESSION['lang'] = $_GET['lang'];
+}
+
+$idioma = $_SESSION['lang'] ?? 'en';
 
 $conexion = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME);
 if ($conexion->connect_error) {
