@@ -46,6 +46,7 @@ header, nav, footer {
 #main, #features{
   flex-grow: 1;
   align-content: center;
+  padding-bottom: 50px; 
 }
 
 #titulo{
@@ -341,7 +342,6 @@ footer{
     padding: 10px 5px;
     background-color: var(--bluedark);
     flex-wrap: wrap;
-    margin-top: 50px;
 }
 
 footer img{
