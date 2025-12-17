@@ -1,6 +1,6 @@
 <?php
 $DB_HOST = 'localhost';
-$DB_USER = 'usuario';
-$DB_PASS = 'password';
-$DB_NAME = 'amason_web';
+$DB_USER = 'root';
+$DB_PASS = '';
+$DB_NAME = 'amason_db';
 ?>
