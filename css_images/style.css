@@ -348,6 +348,7 @@ footer img{
 
     .caracteristicas {
         flex: 0 0 100%;
+        width: 100%;
         padding: 8px;
         height: auto;
     }
@@ -424,6 +425,6 @@ footer img{
     .imagenesdiv {
         width: 100%;
         max-width: 100%;
-        height: auto;
+        height: 100px;
     }
 }
