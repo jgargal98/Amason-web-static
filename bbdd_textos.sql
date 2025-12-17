@@ -1,7 +1,7 @@
-CREATE DATABASE IF NOT EXISTS textos_web
+CREATE DATABASE IF NOT EXISTS amason_web
 CHARACTER SET utf8mb4;
 
-USE textos_web;
+USE amason_web;
 
 CREATE TABLE IF NOT EXISTS textos (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -9,6 +9,14 @@ CREATE TABLE IF NOT EXISTS textos (
     idioma CHAR(2) NOT NULL,
     contenido TEXT NOT NULL,
     UNIQUE (clave, idioma)
+);
+
+CREATE TABLE IF NOT EXISTS mensajes_contacto (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    mensaje TEXT NOT NULL,
+    fecha_envio DATETIME NOT NULL
 );
 
 INSERT INTO textos (clave, idioma, contenido) VALUES

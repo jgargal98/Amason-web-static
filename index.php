@@ -1,7 +1,12 @@
 <?php
+include 'html/config.php';
+
 $idioma = $_GET['lang'] ?? 'en';
 
-$conexion = new mysqli("localhost", "usuario", "password", "textos_web");
+$conexion = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME);
+if ($conexion->connect_error) {
+    die("Error de conexión: " . $conexion->connect_error);
+}
 
 $consulta = $conexion->prepare(
     "SELECT clave, contenido FROM textos WHERE idioma = ?"
@@ -31,16 +36,16 @@ while ($fila = $resultado->fetch_assoc()) {
         <h1><a href="#inicio"><?php echo $textos['titulo_site']; ?></a></h1>
     </header>
     <nav>
-        <a href="html/caracteristicas.html"><?php echo $textos['nav_features']; ?></a>
-        <a href="html/sobreNosotros.html"><?php echo $textos['nav_about_us']; ?></a>
-        <a href="html/contacto.html"><?php echo $textos['nav_contact_us']; ?></a>
+        <a href="html/caracteristicas.php"><?php echo $textos['nav_features']; ?></a>
+        <a href="html/sobreNosotros.php"><?php echo $textos['nav_about_us']; ?></a>
+        <a href="html/contacto.php"><?php echo $textos['nav_contact_us']; ?></a>
         <a href="?lang=es">ES</a>
         <a href="?lang=en">EN</a>
     </nav>
 
     <section id="inicio">
         <div>
-            <h1><a href="html/caracteristicas.html"><?php echo $textos['see_our_features']; ?></a></h1>
+            <h1><a href="html/caracteristicas.php"><?php echo $textos['see_our_features']; ?></a></h1>
         </div>
     </section>
 

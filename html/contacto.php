@@ -1,8 +1,14 @@
 <?php
+include 'config.php';
+
 $idioma = $_GET['lang'] ?? 'en';
 
-$conexion = new mysqli("localhost", "usuario", "password", "textos_web");
+$conexion = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME);
+if ($conexion->connect_error) {
+    die("Error de conexión: " . $conexion->connect_error);
+}
 
+// Cargar textos según el idioma
 $consulta = $conexion->prepare(
     "SELECT clave, contenido FROM textos WHERE idioma = ?"
 );
@@ -13,6 +19,22 @@ $resultado = $consulta->get_result();
 $textos = [];
 while ($fila = $resultado->fetch_assoc()) {
     $textos[$fila["clave"]] = $fila["contenido"];
+}
+
+// Procesar envío del formulario
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nombre = $_POST['nombre'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $mensaje = $_POST['mensaje'] ?? '';
+    $fecha_envio = date('Y-m-d H:i:s');
+
+    $insert = $conexion->prepare(
+        "INSERT INTO mensajes_contacto (nombre, email, mensaje, fecha_envio) VALUES (?, ?, ?, ?)"
+    );
+    $insert->bind_param("ssss", $nombre, $email, $mensaje, $fecha_envio);
+    $insert->execute();
+
+    $mensaje_enviado = true;
 }
 ?>
 <!DOCTYPE html>
@@ -41,6 +63,10 @@ while ($fila = $resultado->fetch_assoc()) {
     <div id="main">
         <section id="contacto">
             <h1><?php echo $textos['contact_us_title']; ?></h1>
+
+            <?php if (!empty($mensaje_enviado)): ?>
+                <p style="color:green;">Mensaje enviado correctamente.</p>
+            <?php endif; ?>
             
             <form action="" method="post">
                 <label for="nombre"><?php echo $textos['contact_name']; ?>:</label>
