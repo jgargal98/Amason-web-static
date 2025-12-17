@@ -74,11 +74,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div id="main">
         <section id="contacto">
             <h1><?php echo $textos['contact_us_title']; ?></h1>
-
-            <?php if (!empty($mensaje_enviado)): ?>
-                <p style="color:green;">Mensaje enviado correctamente.</p>
-            <?php endif; ?>
-            
             <form action="" method="post">
                 <label for="nombre"><?php echo $textos['contact_name']; ?>:</label>
                 <input type="text" id="nombre" name="nombre" placeholder="<?php echo $textos['contact_name_placeholder']; ?>" required>
@@ -90,6 +85,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <textarea id="mensaje" name="mensaje" rows="5" placeholder="<?php echo $textos['contact_message_placeholder']; ?>" required></textarea>
 
                 <button class="button" type="submit"><?php echo $textos['contact_send']; ?></button>
+                
+                <?php if (!empty($mensaje_enviado)): ?>
+                    <p style="color:green;">Mensaje enviado correctamente.</p>
+                <?php endif; ?>
             </form>
         </section>
     </div>

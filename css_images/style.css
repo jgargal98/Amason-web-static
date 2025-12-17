@@ -368,24 +368,39 @@ footer img{
   max-width: 100%;
 }
 
+
+
+/* --- MEDIA QUERY MÓVIL --- */
 @media (max-width: 600px) {
-    #features {
+    body {
+        background-color: var(--bgdark);
+        background-image: none;
+        scroll-snap-type: y mandatory;
+    }
+
+    #features, section, #inicio > div {
+        max-width: 100%;
         width: 100%;
-        row-gap: 20px;
-        column-gap: 0;
+        margin: 0;
+        padding: 15px;
+        border-radius: 0;
+        box-shadow: none;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        scroll-snap-align: start;
     }
 
-    .caracteristicas:has(h3),
-    .caracteristicas:has(img) {
+    .caracteristicas-texto, .caracteristicas-imagen {
         flex: 0 0 100%;
-        height: auto; /* Ajuste automático según contenido */
+        height: auto;
+        padding: 10px 0;
     }
 
-    /* Imágenes centradas y proporcionales en móvil con altura mínima */
-    .caracteristicas:has(img) img {
+    .caracteristicas-imagen img {
         width: 100%;
         height: auto;
-        min-height: 150px; /* nunca demasiado pequeñas */
+        min-height: 150px;
         object-fit: contain;
     }
 
@@ -394,12 +409,7 @@ footer img{
         margin: 15px auto;
     }
 
-    #inicio > div {
-        max-width: 90%;
-        padding: 20px 15px;
-    }
-
-    #inicio h1 {
+    #inicio h1{
         font-size: 2.2em;
         -webkit-text-stroke-width: 1.5px;
     }
@@ -422,13 +432,6 @@ footer img{
         width: 70%;
     }
 
-    section {
-        flex-direction: column;
-        max-width: 100%;
-        padding: 10px 15px;
-        gap: 10px;
-    }
-
     section h1, section h3 {
         flex: 0 0 100%;
         text-align: center;
@@ -444,9 +447,21 @@ footer img{
     }
 
     nav {
+        display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 10px;
         padding: 10px 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .lang-buttons {
+        justify-content: center;
     }
 
     footer {
