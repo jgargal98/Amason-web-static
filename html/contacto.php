@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $to = "amason.forms@gmail.com";
     $subject = "Nuevo mensaje de $nombre";
     $body = "Nombre: $nombre\nEmail: $email\nMensaje:\n$mensaje\nEnviado el: $fecha_envio";
-    $headers = "From: tu-correo@tudominio.com\r\nReply-To: $email\r\n";
+    $headers = "From: $email\r\nReply-To: $email\r\n";
 
     mail($to, $subject, $body, $headers);
 
