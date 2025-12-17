@@ -34,11 +34,15 @@ while ($fila = $resultado->fetch_assoc()) {
         <h1><a href="../index.php"><?php echo $textos['titulo_site']; ?></a></h1>
     </header>
     <nav>
-        <a href="caracteristicas.php"><?php echo $textos['nav_features']; ?></a>
-        <a href="sobreNosotros.php"><?php echo $textos['nav_about_us']; ?></a>
-        <a href="contacto.php"><?php echo $textos['nav_contact_us']; ?></a>
-        <a href="?lang=es">ES</a>
-        <a href="?lang=en">EN</a>
+        <div class="nav-links">
+            <a href="html/caracteristicas.php"><?php echo $textos['nav_features']; ?></a>
+            <a href="html/sobreNosotros.php"><?php echo $textos['nav_about_us']; ?></a>
+            <a href="html/contacto.php"><?php echo $textos['nav_contact_us']; ?></a>
+        </div>
+        <div class="lang-buttons">
+            <a href="?lang=es">ES</a>
+            <a href="?lang=en">EN</a>
+        </div>
     </nav>
 
     <h1 id="titulo"><?php echo $textos['features_title']; ?></h1>
