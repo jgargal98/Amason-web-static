@@ -138,26 +138,28 @@ header h1{
 }
 
 nav {
-  position: sticky;
-  background-color: var(--bluedark);
-  top: 0;
   display: grid;
+  grid-template-areas: "left center right";
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
+  background-color: var(--bluedark);
+  position: sticky;
+  top: 0;
   padding: 10px 20px;
   gap: 20px;
 }
 
 .nav-links {
-  justify-self: center;
+  grid-area: center;
   display: flex;
   gap: 20px;
 }
 
 .lang-buttons {
-  justify-self: end;
+  grid-area: right;
   display: flex;
   gap: 20px;
+  justify-content: flex-end;
 }
 
 a {
