@@ -338,3 +338,92 @@ footer img{
   height:3em;
   max-width: 100%;
 }
+
+@media (max-width: 480px) {
+    #features {
+        width: 100%;
+        row-gap: 20px;
+        column-gap: 0;
+    }
+
+    .caracteristicas {
+        flex: 0 0 100%;
+        padding: 8px;
+        height: auto;
+    }
+
+    #titulo {
+        font-size: 2.2em;
+        margin: 15px auto;
+    }
+
+    #inicio > div {
+        max-width: 90%;
+        padding: 20px 15px;
+    }
+
+    #inicio h1 {
+        font-size: 2.2em;
+        -webkit-text-stroke-width: 1.5px;
+    }
+
+    #inicio h3 {
+        font-size: 1em;
+    }
+
+    p, li {
+        max-width: 100%;
+        font-size: 0.9rem;
+    }
+
+    form {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    form .button {
+        width: 70%;
+    }
+
+    section {
+        flex-direction: column;
+        max-width: 100%;
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    section h1, section h3 {
+        flex: 0 0 100%;
+        text-align: center;
+        font-size: clamp(1rem, 4vw, 1.5rem);
+    }
+
+    header img {
+        height: 3em;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    footer img {
+        height: 2.5em;
+    }
+
+    .imagenesdiv {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
