@@ -1,7 +1,4 @@
-CREATE DATABASE IF NOT EXISTS amason_web
-CHARACTER SET utf8mb4;
-
-USE amason_web;
+USE Amason_db;
 
 CREATE TABLE IF NOT EXISTS textos (
     id INT AUTO_INCREMENT PRIMARY KEY,
