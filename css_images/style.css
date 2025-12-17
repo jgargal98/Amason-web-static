@@ -339,7 +339,7 @@ footer img{
   max-width: 100%;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 800px) {
     #features {
         width: 100%;
         row-gap: 20px;
