@@ -1,7 +1,7 @@
 <?php
 include 'config.php';
 
-session_start(); // iniciar sesión
+session_start();
 
 if (isset($_GET['lang'])) {
     $_SESSION['lang'] = $_GET['lang'];
@@ -14,7 +14,6 @@ if ($conexion->connect_error) {
     die("Error de conexión: " . $conexion->connect_error);
 }
 
-// Cargar textos según el idioma
 $consulta = $conexion->prepare(
     "SELECT clave, contenido FROM textos WHERE idioma = ?"
 );
@@ -27,7 +26,6 @@ while ($fila = $resultado->fetch_assoc()) {
     $textos[$fila["clave"]] = $fila["contenido"];
 }
 
-// Procesar envío del formulario
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nombre = $_POST['nombre'] ?? '';
     $email = $_POST['email'] ?? '';
@@ -39,6 +37,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     );
     $insert->bind_param("ssss", $nombre, $email, $mensaje, $fecha_envio);
     $insert->execute();
+
+    $to = "amason.forms@gmail.com";
+    $subject = "Nuevo mensaje de $nombre";
+    $body = "Nombre: $nombre\nEmail: $email\nMensaje:\n$mensaje\nEnviado el: $fecha_envio";
+    $headers = "From: tu-correo@tudominio.com\r\nReply-To: $email\r\n";
+
+    mail($to, $subject, $body, $headers);
 
     $mensaje_enviado = true;
 }
