@@ -14,6 +14,8 @@ if ($conexion->connect_error) {
     die("Error de conexión: " . $conexion->connect_error);
 }
 
+$conexion->set_charset("utf8");
+
 $consulta = $conexion->prepare(
     "SELECT clave, contenido FROM textos WHERE idioma = ?"
 );
