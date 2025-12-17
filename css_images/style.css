@@ -56,6 +56,7 @@ header, nav, footer {
   margin: 25px auto;
 }
 
+/* --- Features con distribución 60/40 y responsive usando :has() --- */
 #features {
     display: flex;
     flex-wrap: wrap;
@@ -65,16 +66,31 @@ header, nav, footer {
     column-gap: 20px;
 }
 
+/* Sección que contiene texto ocupa 60% */
+.caracteristicas:has(h3) {
+    flex: 0 0 calc(60% - 10px);
+}
+
+/* Sección que contiene imagen ocupa 40% */
+.caracteristicas:has(img) {
+    flex: 0 0 calc(40% - 10px);
+}
+
+/* Mantener altura y centrado */
 .caracteristicas {
-    flex: 0 0 calc(50% - 10px);
     padding: 10px;
     height: 250px;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-.caracteristicas h3 {
-    font-size: clamp(14px, 2vw, 20px);
-    margin: 0;
+/* Mantener imágenes proporcionales */
+.caracteristicas:has(img) img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .imagenesdiv {
@@ -359,10 +375,18 @@ footer img{
         column-gap: 0;
     }
 
-    .caracteristicas {
+    .caracteristicas:has(h3),
+    .caracteristicas:has(img) {
         flex: 0 0 100%;
-        padding: 8px;
+        height: auto; /* Ajuste automático según contenido */
+    }
+
+    /* Imágenes centradas y proporcionales en móvil con altura mínima */
+    .caracteristicas:has(img) img {
+        width: 100%;
         height: auto;
+        min-height: 150px; /* nunca demasiado pequeñas */
+        object-fit: contain;
     }
 
     #titulo {
@@ -432,11 +456,5 @@ footer img{
 
     footer img {
         height: 2.5em;
-    }
-
-    .imagenesdiv {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
     }
 }
