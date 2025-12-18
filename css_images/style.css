@@ -368,7 +368,10 @@ footer img{
   max-width: 100%;
 }
 
-
+#sobreNosotros{
+  text-align: justify;
+  text-justify: distribute;
+}
 
 /* --- MEDIA QUERY MÓVIL --- */
 @media (max-width: 600px) {

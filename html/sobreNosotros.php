@@ -57,7 +57,9 @@ while ($fila = $resultado->fetch_assoc()) {
     <div id="main">
         <section id="sobreNosotros">
             <h1><?php echo $textos['about_us_title']; ?></h1>
-            <h3><?php echo $textos['about_us_text']; ?></h3>
+            <h3>
+                <?php echo nl2br(htmlspecialchars($textos['about_us_text'], ENT_QUOTES, 'UTF-8')); ?>
+            </h3>
         </section>
     </div>
 
