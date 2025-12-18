@@ -376,8 +376,10 @@ footer img{
 }
 
 #sobreNosotros h3 {
-    text-align-last: left;
+    font-size: clamp(0.9rem, 1rem, 1rem);
     line-height: 1.6;
+    text-align: left;
+    text-align-last: left;
 }
 
 /* --- MEDIA QUERY MÓVIL --- */
