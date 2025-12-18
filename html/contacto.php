@@ -70,8 +70,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="nav-links">
             <a href="caracteristicas.php"><?php echo $textos['nav_features']; ?></a>
             <a href="sobreNosotros.php"><?php echo $textos['nav_about_us']; ?></a>
-            <a href="developers.php"><?php echo $textos['nav_developers']; ?></a>
             <a href="contacto.php"><?php echo $textos['nav_contact_us']; ?></a>
+            <a href="developers.php"><?php echo $textos['nav_developers']; ?></a>
+            
         </div>
         <div class="lang-buttons">
             <a href="?lang=es">ES</a>
