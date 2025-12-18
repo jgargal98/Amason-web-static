@@ -1,7 +1,7 @@
 <?php
 include 'config.php';
 
-session_start();
+session_start(); // iniciar sesión
 
 if (isset($_GET['lang'])) {
     $_SESSION['lang'] = $_GET['lang'];
@@ -27,28 +27,6 @@ $textos = [];
 while ($fila = $resultado->fetch_assoc()) {
     $textos[$fila["clave"]] = $fila["contenido"];
 }
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nombre = $_POST['nombre'] ?? '';
-    $email = $_POST['email'] ?? '';
-    $mensaje = $_POST['mensaje'] ?? '';
-    $fecha_envio = date('Y-m-d H:i:s');
-
-    $insert = $conexion->prepare(
-        "INSERT INTO mensajes_contacto (nombre, email, mensaje, fecha_envio) VALUES (?, ?, ?, ?)"
-    );
-    $insert->bind_param("ssss", $nombre, $email, $mensaje, $fecha_envio);
-    $insert->execute();
-
-    $to = "amason.forms@gmail.com";
-    $subject = "Nuevo mensaje de $nombre";
-    $body = "Nombre: $nombre\nEmail: $email\nMensaje:\n$mensaje\nEnviado el: $fecha_envio";
-    $headers = "From: $email\r\nReply-To: $email\r\n";
-
-    mail($to, $subject, $body, $headers);
-
-    $mensaje_enviado = true;
-}
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $idioma; ?>">
@@ -65,7 +43,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <img src="../css_images/favicon.png" alt="Logo" class="logo">
         <h1><a href="../index.php"><?php echo $textos['titulo_site']; ?></a></h1>
     </header>
-
     <nav>
         <div class="nav-links">
             <a href="caracteristicas.php"><?php echo $textos['nav_features']; ?></a>
@@ -73,31 +50,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <a href="developers.php"><?php echo $textos['nav_developers']; ?></a>
             <a href="contacto.php"><?php echo $textos['nav_contact_us']; ?></a>
         </div>
+
         <div class="lang-buttons">
             <a href="?lang=es">ES</a>
             <a href="?lang=en">EN</a>
         </div>
     </nav>
-    
     <div id="main">
-        <section id="contacto">
-            <h1><?php echo $textos['contact_us_title']; ?></h1>
-            <form action="" method="post">
-                <label for="nombre"><?php echo $textos['contact_name']; ?>:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="<?php echo $textos['contact_name_placeholder']; ?>" required>
-
-                <label for="email"><?php echo $textos['contact_email']; ?>:</label>
-                <input type="email" id="email" name="email" placeholder="<?php echo $textos['contact_email_placeholder']; ?>" required>
-
-                <label for="mensaje"><?php echo $textos['contact_message']; ?>:</label>
-                <textarea id="mensaje" name="mensaje" rows="5" placeholder="<?php echo $textos['contact_message_placeholder']; ?>" required></textarea>
-
-                <button class="button" type="submit"><?php echo $textos['contact_send']; ?></button>
-                
-                <?php if (!empty($mensaje_enviado)): ?>
-                    <p style="color:green;">Mensaje enviado correctamente.</p>
-                <?php endif; ?>
-            </form>
+        <section id="sobreNosotros">
+            <h1><?php echo $textos['developers_title'];?></h1>
+            <h3>
+                <?php echo $textos['developers_text'];?>
+            </h3>
         </section>
     </div>
 

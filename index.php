@@ -48,6 +48,7 @@ while ($fila = $resultado->fetch_assoc()) {
             <a href="html/caracteristicas.php"><?php echo $textos['nav_features']; ?></a>
             <a href="html/sobreNosotros.php"><?php echo $textos['nav_about_us']; ?></a>
             <a href="html/contacto.php"><?php echo $textos['nav_contact_us']; ?></a>
+            <a href="html/developers.php"><?php echo $textos['nav_developers']; ?></a>
         </div>
         <div class="lang-buttons">
             <a href="?lang=es">ES</a>
@@ -66,6 +67,7 @@ while ($fila = $resultado->fetch_assoc()) {
 
     <footer>
         <img src="css_images/favicon.png" alt="logo">
+        <p>&copy; <?php echo date("Y"); ?> CigaSoft. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>

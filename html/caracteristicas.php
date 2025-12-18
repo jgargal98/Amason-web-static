@@ -47,6 +47,7 @@ while ($fila = $resultado->fetch_assoc()) {
         <div class="nav-links">
             <a href="caracteristicas.php"><?php echo $textos['nav_features']; ?></a>
             <a href="sobreNosotros.php"><?php echo $textos['nav_about_us']; ?></a>
+            <a href="developers.php"><?php echo $textos['nav_developers']; ?></a>
             <a href="contacto.php"><?php echo $textos['nav_contact_us']; ?></a>
         </div>
         <div class="lang-buttons">
@@ -54,25 +55,21 @@ while ($fila = $resultado->fetch_assoc()) {
             <a href="?lang=en">EN</a>
         </div>
     </nav>
-
-    <h1 id="titulo"><?php echo $textos['features_title']; ?></h1>
-    <div id="features">
-        <section class="caracteristicas">
-            <h3><?php echo $textos['features_text_1']; ?></h3>
-        </section>
-        <section class="caracteristicas">
-            <img src="../css_images/imagenTec.jpeg" class="imagenesdiv">
-        </section>
-        <section class="caracteristicas">
-            <img src="../css_images/imagenTec.jpeg" class="imagenesdiv">
-        </section>
-        <section class="caracteristicas">
-            <h3><?php echo $textos['features_text_2']; ?></h3>
-        </section>
+    <div id="caracteristicas">
+        <h1><?php echo $textos['features_title']; ?></h1>
+            <?php
+                $pdfUrl = $idioma === 'es' 
+                    ? '../css_images/manual/manual_es.pdf' 
+                    : '../css_images/manual/manual_en.pdf';
+            ?>
+            <object data="<?php echo $pdfUrl; ?>" type="application/pdf">
+                <p>Tu navegador no soporta PDFs. Puedes descargarlo <a href="<?php echo $pdfUrl; ?>">aquí</a>.</p>
+            </object>
     </div>
 
     <footer>
         <img src="../css_images/favicon.png" alt="logo">
+        <p>&copy; <?php echo date("Y"); ?> CigaSoft. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>

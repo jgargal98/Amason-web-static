@@ -23,7 +23,7 @@ INSERT INTO textos (clave, idioma, contenido) VALUES
 ('hero_title', 'en', 'We move the engine of the digital economy.'),
 ('hero_subtitle', 'en', 'Your packages arrive fast, safe and hassle-free, wherever you want.'),
 ('hero_title', 'es', 'Movemos el motor de la economía digital.'),
-('hero_subtitle', 'es', 'Tus paquetes llegan rápido, seguro y sin complicaciones, donde tú quieras.');
+('hero_subtitle', 'es', 'Tus paquetes llegan rápido, seguro y sin complicaciones, donde tú quieras.'),
 
 ('nav_features', 'en', 'Features'),
 ('nav_features', 'es', 'Características'),
@@ -31,9 +31,11 @@ INSERT INTO textos (clave, idioma, contenido) VALUES
 ('nav_about_us', 'es', 'Sobre nosotros'),
 ('nav_contact_us', 'en', 'Contact us'),
 ('nav_contact_us', 'es', 'Contáctanos'),
+('nav_developers', 'en', 'Developers'),
+('nav_developers', 'es', 'Desarrollo'),
 
-('see_our_features', 'en', 'See our features'),
-('see_our_features', 'es', 'Ver nuestras características'),
+('see_our_features', 'en', 'Learn our features'),
+('see_our_features', 'es', 'Aprende nuestras características'),
 
 ('features_title', 'en', 'Features'),
 ('features_title', 'es', 'Características'),
@@ -67,6 +69,12 @@ INSERT INTO textos (clave, idioma, contenido) VALUES
 
 ('contact_us_title', 'en', 'Contact us'),
 ('contact_us_title', 'es', 'Contáctanos'),
+
+('developers_title', 'en', 'Developers'),
+('developers_title', 'es', 'Desarrollo'),
+
+('developers_text', 'en', 'This website was developed by the <strong>CigaSoft</strong> team,<br>consisting of <strong>José Porras</strong>, <strong>Ricardo Ebothemen</strong>, and <strong>Juan García</strong>.<br>Our goal is to provide high-quality digital experiences,<br>combining creativity and technology to deliver effective solutions to our users.'),
+('developers_text', 'es', 'Esta página ha sido desarrollada por el <strong>equipo CigaSoft</strong>,<br>formado por <strong>José Porras</strong>, <strong>Ricardo Ebothemen</strong> y <strong>Juan García</strong>.<br>Nuestro objetivo es ofrecer experiencias digitales de alta calidad,<br>combinando creatividad y tecnología para brindar soluciones efectivas a nuestros usuarios.'),
 
 ('contact_name', 'en', 'Name'),
 ('contact_name', 'es', 'Nombre'),
