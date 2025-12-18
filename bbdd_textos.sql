@@ -54,8 +54,8 @@ INSERT INTO textos (clave, idioma, contenido) VALUES
 ('developers_title', 'en', 'Developers'),
 ('developers_title', 'es', 'Desarrollo'),
 
-('developers_text', 'en', 'This website was developed by the <strong>CigaSoft</strong> team,<br>consisting of <strong>José Porras</strong>, <strong>Ricardo Ebothemen</strong>, and <strong>Juan García</strong>.<br>Our goal is to provide high-quality digital experiences,<br>combining creativity and technology to deliver effective solutions to our users.'),
-('developers_text', 'es', 'Esta página ha sido desarrollada por el <strong>equipo CigaSoft</strong>,<br>formado por <strong>José Porras</strong>, <strong>Ricardo Ebothemen</strong> y <strong>Juan García</strong>.<br>Nuestro objetivo es ofrecer experiencias digitales de alta calidad,<br>combinando creatividad y tecnología para brindar soluciones efectivas a nuestros usuarios.'),
+('developers_text', 'en', 'This website was developed by the <strong>CigaSoft</strong> team,<br>consisting of <strong>José Porras</strong>, <strong>Ricardo Ebhotemen</strong>, and <strong>Juan García</strong>.<br>Our goal is to provide high-quality digital experiences,<br>combining creativity and technology to deliver effective solutions to our users.'),
+('developers_text', 'es', 'Esta página ha sido desarrollada por el <strong>equipo CigaSoft</strong>,<br>formado por <strong>José Porras</strong>, <strong>Ricardo Ebhotemen</strong> y <strong>Juan García</strong>.<br>Nuestro objetivo es ofrecer experiencias digitales de alta calidad,<br>combinando creatividad y tecnología para brindar soluciones efectivas a nuestros usuarios.'),
 
 ('contact_name', 'en', 'Name'),
 ('contact_name', 'es', 'Nombre'),
