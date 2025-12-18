@@ -46,7 +46,7 @@ header, nav, footer {
 #main, #features{
   flex-grow: 1;
   align-content: center;
-  padding-bottom: 50px; 
+  padding: 50px 0; 
 }
 
 #titulo{
@@ -215,9 +215,6 @@ section h1 {
 
 section h3 {
   flex: 0 0 70%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
   font-size: clamp(1rem, 2vw, 1.3rem);
   margin: 0;
 }
@@ -276,8 +273,15 @@ p, li {
   color: var(--bluemid);
   line-height: 1.33;
   letter-spacing: 0;
-  max-width: 30ch;
   margin-bottom: 1em;
+}
+
+p{
+  max-width: 30ch;
+}
+
+li::marker {
+    color: var(--orangeaccent);
 }
 
 form{
@@ -368,9 +372,9 @@ footer img{
   max-width: 100%;
 }
 
-#sobreNosotros{
-  text-align: justify;
-  text-justify: distribute;
+#sobreNosotros h3 {
+    text-align-last: left;
+    line-height: 1.6;
 }
 
 /* --- MEDIA QUERY MÓVIL --- */

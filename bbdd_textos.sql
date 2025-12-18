@@ -35,29 +35,27 @@ INSERT INTO textos (clave, idioma, contenido) VALUES
 ('features_text_2', 'es', 'Lorem ipsum'),
 ('about_us_title', 'en', 'About us'),
 ('about_us_title', 'es', 'Sobre nosotros'),
-('about_us_text', 'en', 'About Amason: Redefining Modern Delivery
-At Amason, we don’t just deliver packages; we power the engine of the digital economy. We were founded with a clear mission: to eliminate the barriers between what you desire and the moment you hold it in your hands.
 
-Our logistical infrastructure combines cutting-edge technology with an intelligent distribution network, allowing us to reach every corner of the country in record time. In a world that never stops, Amason is the trusted partner that ensures your orders arrive safely, efficiently, and sustainably.
+('about_us_text', 'en', '<strong>About Amason: Redefining Modern Delivery</strong><br><br>
+    At Amason, we don’t just deliver packages; we power the engine of the digital economy. We were founded with a clear mission: to eliminate the barriers between what you desire and the moment you hold it in your hands.<br><br>
+    Our logistical infrastructure combines cutting-edge technology with an intelligent distribution network, allowing us to reach every corner of the country in record time. In a world that never stops, Amason is the trusted partner that ensures your orders arrive safely, efficiently, and sustainably.<br><br>
+    <strong>What drives us?</strong><br>
+    <ul>
+        <li><strong>Speed:</strong> We optimize routes in real-time to beat the clock.</li>
+        <li><strong>Precision:</strong> A state-of-the-art tracking system so you always know exactly where your shipment is.</li>
+        <li><strong>Commitment:</strong> We work day and night to ensure that the experience of receiving is just as satisfying as the experience of buying.</li>
+    </ul>'),
 
-What drives us?
-Speed: We optimize routes in real-time to beat the clock.
+('about_us_text', 'es', '    <strong>Sobre Amason: Redefiniendo la Entrega Moderna</strong><br><br>
+    En Amason, no solo entregamos paquetes; movemos el motor de la economía digital. Nacimos con una misión clara: eliminar las barreras entre lo que deseas y el momento en que lo tienes en tus manos.<br><br>
+    Nuestra infraestructura logística combina tecnología de vanguardia con una red de distribución inteligente que nos permite llegar a cada rincón del país en tiempo récord. En un mundo que no se detiene, Amason es el socio de confianza que garantiza que tus pedidos lleguen de forma segura, eficiente y sostenible.<br><br>
+    <strong>¿Qué nos mueve?</strong><br>
+    <ul>
+        <li><strong>Velocidad:</strong> Optimizamos rutas en tiempo real para ganarle al reloj.</li>
+        <li><strong>Precisión:</strong> Un sistema de seguimiento de última generación para que siempre sepas dónde está tu envío.</li>
+        <li><strong>Compromiso:</strong> Trabajamos día y noche para que la experiencia de recibir sea tan satisfactoria como la de comprar.</li>
+    </ul>'),
 
-Precision: A state-of-the-art tracking system so you always know exactly where your shipment is.
-
-Commitment: We work day and night to ensure that the experience of receiving is just as satisfying as the experience of buying. '),
-('about_us_text', 'es', 'Sobre Amason: Redefiniendo la Entrega Moderna
-En Amason, no solo entregamos paquetes; movemos el motor de la economía digital. Nacimos con una misión clara: eliminar las barreras entre lo que deseas y el momento en que lo tienes en tus manos.
-
-Nuestra infraestructura logística combina tecnología de vanguardia con una red de distribución inteligente que nos permite llegar a cada rincón del país en tiempo récord. En un mundo que no se detiene, Amason es el socio de confianza que garantiza que tus pedidos lleguen de forma segura, eficiente y sostenible.
-
-¿Qué nos mueve?
-
-Velocidad: Optimizamos rutas en tiempo real para ganarle al reloj.
-
-Precisión: Un sistema de seguimiento de última generación para que siempre sepas dónde está tu envío.
-
-Compromiso: Trabajamos día y noche para que la experiencia de recibir sea tan satisfactoria como la de comprar.'),
 ('contact_us_title', 'en', 'Contact us'),
 ('contact_us_title', 'es', 'Contáctanos'),
 ('contact_name', 'en', 'Name'),
