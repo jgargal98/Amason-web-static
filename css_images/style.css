@@ -238,22 +238,20 @@ section h3 {
     text-align: center;
 }
 
-#inicio h1{
-  font-size: 4em;
+#inicio h1 {
+    font-size: 4em;
+    color: var(--bluelight);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+#inicio a{
+  font-family: 'Geom', sans-serif;
+  font-size: 3em;
   cursor: pointer;
   color: transparent;
   -webkit-text-stroke-color: var(--orangeaccent);
   -webkit-text-stroke-width: 2px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-}
-
-#inicio h1:hover {
-  color: var(--orangeaccent);
-  transition: var(--transition);
-}
-
-#inicio a{
-  color: transparent;
 }
 
 #inicio a:hover {
@@ -263,8 +261,13 @@ section h3 {
 }
 
 #inicio h3 {
+    font-size: 2em;
+    font-weight: 500;
+    line-height: 1.6;
     color: var(--bglight);
     margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
 p, li {

@@ -57,7 +57,10 @@ while ($fila = $resultado->fetch_assoc()) {
 
     <section id="inicio">
         <div>
-            <h1><a href="html/caracteristicas.php"><?php echo $textos['see_our_features']; ?></a></h1>
+            <h1><?php echo $textos['hero_title']; ?></h1>
+            <h3><?php echo $textos['hero_subtitle']; ?></h3>
+
+            <a href="html/caracteristicas.php"><?php echo $textos['see_our_features'];?></a>
         </div>
     </section>
 

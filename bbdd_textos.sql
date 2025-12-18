@@ -19,20 +19,29 @@ CREATE TABLE IF NOT EXISTS mensajes_contacto (
 INSERT INTO textos (clave, idioma, contenido) VALUES
 ('titulo_site', 'en', 'Amason'),
 ('titulo_site', 'es', 'Amason'),
+
+('hero_title', 'en', 'We move the engine of the digital economy.'),
+('hero_subtitle', 'en', 'Your packages arrive fast, safe and hassle-free, wherever you want.'),
+('hero_title', 'es', 'Movemos el motor de la economía digital.'),
+('hero_subtitle', 'es', 'Tus paquetes llegan rápido, seguro y sin complicaciones, donde tú quieras.');
+
 ('nav_features', 'en', 'Features'),
 ('nav_features', 'es', 'Características'),
 ('nav_about_us', 'en', 'About us'),
 ('nav_about_us', 'es', 'Sobre nosotros'),
 ('nav_contact_us', 'en', 'Contact us'),
 ('nav_contact_us', 'es', 'Contáctanos'),
+
 ('see_our_features', 'en', 'See our features'),
 ('see_our_features', 'es', 'Ver nuestras características'),
+
 ('features_title', 'en', 'Features'),
 ('features_title', 'es', 'Características'),
 ('features_text_1', 'en', 'Lorem ipsum'),
 ('features_text_1', 'es', 'Lorem ipsum'),
 ('features_text_2', 'en', 'Lorem ipsum'),
 ('features_text_2', 'es', 'Lorem ipsum'),
+
 ('about_us_title', 'en', 'About us'),
 ('about_us_title', 'es', 'Sobre nosotros'),
 
@@ -58,6 +67,7 @@ INSERT INTO textos (clave, idioma, contenido) VALUES
 
 ('contact_us_title', 'en', 'Contact us'),
 ('contact_us_title', 'es', 'Contáctanos'),
+
 ('contact_name', 'en', 'Name'),
 ('contact_name', 'es', 'Nombre'),
 ('contact_name_placeholder', 'en', 'Your name'),
