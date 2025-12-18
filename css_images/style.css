@@ -350,15 +350,72 @@ footer img{
 }
 
 #caracteristicas{
-  background-color: white;
   justify-content: center;
-  padding: 0; 
+  gap: 50px;
+  padding: 50px 0;
+  background-color: var(--bluelight);
+  display: flex;
+  flex-direction: column;
 }
 
-object {
-    width: 100%;
+#caracteristicas section{
+  gap: 20px;
+}
+
+section p{
+  color: var(--bluedark);
+  text-align: justify;
+}
+
+section img {
     height: 100%;
-    border: none;
+    width: auto;
+    max-height: 300px;
+    transition: var(--transition);
+}
+
+section img:hover {
+    transform: scale(1.5);
+}
+
+#indice {
+    position: fixed;
+    top: 150px;
+    left: 20px;
+    width: 200px;
+    background: var(--bglight);
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-height: 60vh;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+#indice ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+#indice li {
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--bluelight);
+}
+
+#indice a {
+  text-decoration: none;
+  color: var(--bluedark);
+  font-weight: bold;
+  display: block;
+  padding: 5px 0;
+  transition: var(--transition);
+}
+
+#indice a:hover {
+  color: var(--orangeaccent);
 }
 
 /*------media queries------*/
@@ -408,6 +465,20 @@ object {
 
     form .button {
         width: 70%;
+    }
+
+    #indice {
+        display: none;
+    }
+
+    section img {
+        max-height: 200px;
+        width: auto;
+        transform: none;
+    }
+    
+    section img:hover {
+        transform: none !important;
     }
 
     section h1, section h3 {

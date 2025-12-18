@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <footer>
         <img src="../css_images/favicon.png" alt="logo">
-        <p>&copy; <?php echo date("Y"); ?> CigaSoft. Todos los derechos reservados.</p>
+        <p>&copy; <?php echo date("Y"); echo $textos['footer_text'];?></p>
     </footer>
 </body>
 </html>

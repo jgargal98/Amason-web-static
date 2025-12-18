@@ -1,7 +1,7 @@
 <?php
 include 'config.php';
 
-session_start(); // iniciar sesión
+session_start();
 
 if (isset($_GET['lang'])) {
     $_SESSION['lang'] = $_GET['lang'];
@@ -56,21 +56,45 @@ while ($fila = $resultado->fetch_assoc()) {
             <a href="?lang=en">EN</a>
         </div>
     </nav>
-    <div id="caracteristicas">
-        <h1><?php echo $textos['features_title']; ?></h1>
-            <?php
-                $pdfUrl = $idioma === 'es' 
-                    ? '../css_images/manual/manual_es.pdf' 
-                    : '../css_images/manual/manual_en.pdf';
-            ?>
-            <object data="<?php echo $pdfUrl; ?>" type="application/pdf">
-                <p>Tu navegador no soporta PDFs. Puedes descargarlo <a href="<?php echo $pdfUrl; ?>">aquí</a>.</p>
-            </object>
-    </div>
+
+
+        <div id="caracteristicas">
+            <aside id="indice">
+                <ul>
+                    <?php
+                    foreach ($textos as $clave => $contenido) {
+                        if (preg_match('/^features_title_(\d+)$/', $clave, $matches)) {
+                            $i = $matches[1];
+                            ?>
+                            <li><a href="#feature_<?= $i ?>"><?= $contenido ?></a></li>
+                            <?php
+                        }
+                    }
+                    ?>
+                </ul>
+            </aside>
+        <?php
+        foreach ($textos as $clave => $contenido) {
+            if (preg_match('/^features_text_(\d+)$/', $clave, $matches)) {
+                $i = $matches[1];
+                $titulo = $textos["features_title_$i"] ?? ''; // si existe título
+                ?>
+                <section id="feature_<?= $i ?>">
+                    <?php if ($titulo): ?>
+                        <h2><?= $titulo ?></h2>
+                    <?php endif; ?>
+                    <p><?= $contenido ?></p>
+                    <img src="images/image<?= $i ?>.png" alt="">
+                </section>
+                <?php
+            }
+        }
+        ?>
+        </div>
 
     <footer>
         <img src="../css_images/favicon.png" alt="logo">
-        <p>&copy; <?php echo date("Y"); ?> CigaSoft. Todos los derechos reservados.</p>
+        <p>&copy; <?php echo date("Y"); echo $textos['footer_text'];?></p>
     </footer>
 </body>
 </html>
