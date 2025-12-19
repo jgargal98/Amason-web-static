@@ -54,8 +54,9 @@ INSERT INTO textos (clave, idioma, contenido) VALUES
 ('developers_title', 'en', 'Developers'),
 ('developers_title', 'es', 'Desarrollo'),
 
-('developers_text', 'en', 'This website was developed by the <strong>CigaSoft</strong> team,<br>consisting of <strong>José Porras</strong>, <strong>Ricardo Ebhotemen</strong>, and <strong>Juan García</strong>.<br>Our goal is to provide high-quality digital experiences,<br>combining creativity and technology to deliver effective solutions to our users.'),
-('developers_text', 'es', 'Esta página ha sido desarrollada por el <strong>equipo CigaSoft</strong>,<br>formado por <strong>José Porras</strong>, <strong>Ricardo Ebhotemen</strong> y <strong>Juan García</strong>.<br>Nuestro objetivo es ofrecer experiencias digitales de alta calidad,<br>combinando creatividad y tecnología para brindar soluciones efectivas a nuestros usuarios.'),
+('developers_text', 'en', 'The application and the overall service have been developed by <strong>FaltaNet</strong>,<br>the company responsible for the core platform and service architecture,<br>led by <strong>Álvaro Sierra</strong>, <strong>Jesús Palomino</strong>, <strong>Ainhoa Gómez</strong>, <strong>Alejandro J. Muñoz</strong>, <strong>Fátima Esmeralda</strong>, and <strong>Carlos Robles</strong>.<br><br><br>This website was developed by the <strong>CigaSoft</strong> team,<br>consisting of <strong>José Porras</strong>, <strong>Ricardo Ebhotemen</strong>, and <strong>Juan García</strong>.'),
+
+('developers_text', 'es', 'La aplicación y el servicio en general han sido desarrollados por <strong>FaltaNet</strong>,<br>la empresa responsable de la plataforma principal y la arquitectura del servicio,<br>formada por <strong>Álvaro Sierra</strong>, <strong>Jesús Palomino</strong>, <strong>Ainhoa Gómez</strong>, <strong>Alejandro J. Muñoz</strong>, <strong>Fátima Esmeralda</strong> y <strong>Carlos Robles</strong>.<br><br><br>Esta página ha sido desarrollada por el <strong>equipo CigaSoft</strong>,<br>formado por <strong>José Porras</strong>, <strong>Ricardo Ebhotemen</strong> y <strong>Juan García</strong>.'),
 
 ('contact_name', 'en', 'Name'),
 ('contact_name', 'es', 'Nombre'),
@@ -72,8 +73,8 @@ INSERT INTO textos (clave, idioma, contenido) VALUES
 ('contact_send', 'en', 'Send'),
 ('contact_send', 'es', 'Enviar'),
 
-('footer_text', 'en', ' CigaSoft.'),
-('footer_text', 'es', ' CigaSoft.'),
+('footer_text', 'en', ' CigaSoft, FaltaNet.'),
+('footer_text', 'es', ' CigaSoft, FaltaNet.'),
 
 ('features_title_1', 'es', 'Pantalla de inicio'),
 ('features_text_1', 'es', 'Esta es la interfaz principal de acceso a la plataforma <b>AMASON</b>.<br>Desde aquí, el usuario puede gestionar los tres pilares fundamentales del sistema antes de entrar a la aplicación operativa.<br><br><b>Descripción de la Interfaz:</b><br>La pantalla presenta tres módulos de control integrados:<br>- <b>Gestión FTP:</b> Panel para la administración segura de archivos y carpetas en el servidor.<br>- <b>Base de Datos:</b> Control centralizado de usuarios y registros mediante consultas SQL.<br>- <b>Correo SMTP:</b> Sistema de mensajería instantánea para el envío de notificaciones y correos a clientes.<br><br><b>Nota de Conectividad:</b> Para acceder mediante el botón "Entrar a la aplicación", es imprescindible contar con una conexión activa a la red. En caso de iniciar la app sin conexión, el sistema mostrará un mensaje de error impidiendo el acceso.'),
